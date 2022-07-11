@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            border-bottom: 1px solid #000;
+        }
+        #box{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(255,32,34);
+            margin: 10px 500px;
+            border-radius: 20px;
+            padding: 2px 2px 2px 2px;
+        }
+        #btn, #name, #age, #select{
+            padding: 10px 10px;
+            margin: 2px 2px 2px 2px;
+            width: 200px;
+            height: 25px;
+            border-radius: 10px;
+        }
+        footer{
+            border-top: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tester</h1>
+    <div id="box">
+        <h2>Input your name</h2>
+        <input type="text" id="name" placeholder="input your name">
+        <h2>Input your gender</h2>
+        <input type="number" id="age" placeholder="input your age">
+        <h2>Input your gender</h2>
+        <select id="select">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <button id="btn" onclick="submit()">submit</button>
+    </div>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <footer>
+        <p>Created by Farrel Amroe Azhari</p>
+    </footer>
+</body>
+<script>
+    function submit(){
+        const name = document.getElementById("name").value;
+        const select = document.getElementById("select").value;
+        const age = document.getElementById("age").value;
+        if(select=="Female"){
+            female=document.getElementById("demo");
+            female.innerHTML=name+" cantik";
+        }
+        else{
+            male=document.getElementById("demo");
+            male.innerHTML=name+" ganteng";
+        }
+        if(age>=20){
+            tua=document.getElementById("demo1");
+            tua.innerHTML= name + " tua";
+        }
+        else{
+            muda=document.getElementById("demo1");
+            muda.innerHTML= name + " muda";
+        }
+    }
+</script>
+</html>
